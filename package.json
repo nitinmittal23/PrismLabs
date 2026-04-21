@@ -2,7 +2,7 @@
   "name": "prismlabs",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nitinmittal23.github.io/PrismLabs",
+  "homepage": "https://prismlabs.technology",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
