@@ -1,9 +1,7 @@
-'use client';
-
 import { useState, useEffect, useRef } from 'react';
 import { Header } from '@/components/layout/Header';
 import { ScrollHighlightText } from '@/components/ScrollHighlightText';
-import styles from './page.module.css';
+import styles from './App.module.css';
 
 const howItWorksSteps = [
   {
@@ -14,7 +12,7 @@ const howItWorksSteps = [
   }
 ];
 
-export default function Home() {
+export default function App() {
   const [hiwVisible, setHiwVisible] = useState(false);
   const [trustVisible, setTrustVisible] = useState(false);
   const hiwRef = useRef<HTMLDivElement>(null);
@@ -44,7 +42,10 @@ export default function Home() {
       {/* ─── Hero ─── */}
       <section className={styles.hero}>
         <div className={styles.heroBg}>
-          <div className={styles.heroBgImage} />
+          <div
+            className={styles.heroBgImage}
+            style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/hero-bg.jpg)` }}
+          />
           <div className={styles.heroBgOverlay} />
         </div>
 
@@ -53,7 +54,7 @@ export default function Home() {
 
           <div className={styles.heroTextBlock}>
             <h1 className={styles.heroHeadline}>
-              We build software<br />& digital products.<br />
+              We build software<br />&amp; digital products.<br />
             </h1>
 
             <div className={styles.heroActions}>
@@ -110,8 +111,8 @@ export default function Home() {
           <div className={styles.footerLeft}>
             <div className={styles.footerBrand}>
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <polygon points="14,3 26,24 2,24" stroke="white" strokeWidth="2" fill="none" strokeLinejoin="round" />
-                </svg>
+                <polygon points="14,3 26,24 2,24" stroke="white" strokeWidth="2" fill="none" strokeLinejoin="round" />
+              </svg>
               <span className={styles.footerBrandName}>Prism Labs</span>
             </div>
           </div>
@@ -119,7 +120,7 @@ export default function Home() {
           <div className={styles.footerRight}>
             <nav className={styles.footerNav}>
               <span className={styles.footerLink}>CWS-1V-227261
-                26th Floor, <br/>Amber Gem Tower, Ajman <br/> +971-588935929 </span>
+                26th Floor, <br />Amber Gem Tower, Ajman <br /> +971-588935929 </span>
             </nav>
           </div>
         </div>

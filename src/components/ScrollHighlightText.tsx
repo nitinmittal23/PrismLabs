@@ -1,5 +1,3 @@
-'use client';
-
 import { useRef, useEffect, useState, useCallback } from 'react';
 
 interface ScrollHighlightTextProps {
@@ -19,9 +17,6 @@ export function ScrollHighlightText({ text, style, className }: ScrollHighlightT
     const rect = el.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
-    // Track progress across the full element height for a slower reveal.
-    // Start when the element's top enters the viewport bottom,
-    // finish when the element's bottom reaches the viewport center.
     const start = windowHeight;
     const end = windowHeight * 0.3 - rect.height;
     const rawProgress = (start - rect.top) / (start - end);
@@ -30,7 +25,7 @@ export function ScrollHighlightText({ text, style, className }: ScrollHighlightT
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll(); // set initial state
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
@@ -39,9 +34,6 @@ export function ScrollHighlightText({ text, style, className }: ScrollHighlightT
   return (
     <p ref={containerRef} style={style} className={className}>
       {words.map((word, i) => {
-        // Each word's highlight window starts exactly at its position in the sequence.
-        // transitionWidth is narrow (1.5 word-slots) so the lit "wave" moves
-        // sharply through the text word-by-word as the user scrolls.
         const transitionWidth = 1.5 / words.length;
         const wordStart = i / words.length;
         const wordAlpha = (progress - wordStart) / transitionWidth;

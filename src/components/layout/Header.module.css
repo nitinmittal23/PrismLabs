@@ -35,7 +35,6 @@
   letter-spacing: -0.02em;
 }
 
-/* Floating pill nav */
 .nav {
   position: absolute;
   left: 50%;
@@ -66,7 +65,6 @@
   background: rgba(255, 255, 255, 0.06);
 }
 
-/* Join Waitlist pill button */
 .joinBtn {
   display: flex;
   align-items: center;
@@ -89,12 +87,6 @@
   transform: scale(1.02);
 }
 
-.joinBtn svg {
-  width: 16px;
-  height: 16px;
-}
-
-/* Mobile */
 @media (max-width: 768px) {
   .header {
     padding: 0 20px;

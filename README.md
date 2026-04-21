@@ -1,37 +1,33 @@
+# Prism Labs
+
+Software studio website. Live at [nitinmittal23.github.io/PrismLabs](https://nitinmittal23.github.io/PrismLabs).
+
 ## Tech Stack
 
-- Next.js (App Router)
-- React + TypeScript
+- Vite + React + TypeScript
 - Tailwind CSS v4
-- Radix UI primitives
-- Recharts
-- Sonner (toasts)
 
 ## Local Development
 
-1. Install dependencies:
+Install dependencies:
 
 ```bash
-npm ci
+npm install
 ```
 
-2. Copy the example env file and fill in the values:
-
-```bash
-cp .env.example .env.local
-```
-
-3. Start the dev server:
+Start the dev server:
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:5173](http://localhost:5173).
 
 ## Scripts
 
-- `npm run dev` - start local dev server
-- `npm run lint` - run ESLint
-- `npm run build` - production build
-- `npm run start` - run production server
+| Command | Description |
+|---|---|
+| `npm run dev` | Start local dev server |
+| `npm run build` | Production build |
+| `npm run preview` | Preview production build locally |
+| `npm run deploy` | Build and deploy to GitHub Pages |
