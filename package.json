@@ -2,7 +2,7 @@
   "name": "v1",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://<username>.github.io/<repo-name>",
+  "homepage": "https://nitinmittal23.github.io/PrismLabs",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
